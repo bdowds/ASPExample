@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Car";
+}
+
+<a asp-area="" asp-controller="Car" asp-action="ToCreateCar">Create Car</a>
+
+<h2>Our Car</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+
+    @foreach (Car car in CarViewModel.Cars)
+    {
+        <tr>
+            <td>@car.Make</td>
+            <td>@car.Model</td>
+            <td>@car.Year</td>
+        </tr>
+    }
+</table>
